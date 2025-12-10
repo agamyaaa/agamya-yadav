@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>E-commerce Navbar</title> 
+ 
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        } 
+ 
+        body { 
+            font-family: Arial, sans-serif; 
+        } 
+ 
+        .navbar { 
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 1rem 5vw; 
+            background-color: #222; 
+            color: white; 
+            position: relative; 
+        } 
+ 
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+        } 
+ 
+        .nav-links { 
+            list-style: none; 
+            position: absolute; 
+            top: 100%; 
+            left: 0; 
+            right: 0; 
+            background-color: #333; 
+            display: none; 
+            flex-direction: column; 
+            padding: 0.75rem 0; 
+        } 
+ 
+        .nav-links li { 
+            margin: 0.5rem 0; 
+            text-align: center; 
+        } 
+ 
+        .nav-links a { 
+            text-decoration: none; 
+            color: white; 
+            font-size: 1rem; 
+        } 
+ 
+        .actions { 
+            display: flex; 
+            align-items: center; 
+        } 
+ 
+        .actions a { 
+            margin-left: 1rem; 
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.95rem; 
+        } 
+ 
+        .hamburger { 
+            display: block; 
+            font-size: 2rem; 
+            cursor: pointer; 
+            margin-left: 1rem; 
+        } 
+ 
+        #menu-toggle { 
+            display: none; 
+        } 
+ 
+        #menu-toggle:checked + .hamburger + .nav-links { 
+            display: flex; 
+        } 
+ 
+        @media (min-width: 768px) { 
+            .navbar { 
+                align-items: center; 
+            } 
+            .nav-links { 
+                position: static; 
+                display: flex; 
+                flex-direction: row; 
+                background-color: transparent; 
+                padding: 0; 
+            } 
+            .nav-links li { 
+                margin: 0 1rem; 
+            } 
+            .hamburger { 
+                display: none; 
+            } 
+        } 
+ 
+        .hero { 
+            padding: 2rem 5vw; 
+        } 
+ 
+        .hero h1 { 
+            margin-bottom: 0.5rem; 
+        } 
+    </style> 
+</head> 
+<body> 
+ 
+<nav class="navbar"> 
+    <div class="logo">ShopEase</div> 
+ 
+    <input type="checkbox" id="menu-toggle"> 
+    <label for="menu-toggle" class="hamburger">&#9776;</label> 
+ 
+    <ul class="nav-links"> 
+        <li><a href="#">Home</a></li> 
+        <li><a href="#">Products</a></li> 
+        <li><a href="#">Categories</a></li> 
+        <li><a href="#">Deals</a></li> 
+        <li><a href="#">Contact</a></li> 
+    </ul> 
+ 
+    <div class="actions"> 
+        <a href="#">Cart 🛒</a> 
+        <a href="#">Login</a> 
+    </div> 
+</nav> 
+ 
+<section class="hero"> 
+    <h1>Welcome to ShopEase!</h1> 
+    <p>Your one-stop destination for all shopping needs.</p> 
+</section> 
+ 
+</body> 
+</html>
